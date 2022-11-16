@@ -1,6 +1,7 @@
 <?php
 class User {
     private int $id;
+    public mysqli $db;
     private string $login;
     private string $password;
     private string $firstname;
