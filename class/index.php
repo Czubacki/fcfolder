@@ -1,4 +1,5 @@
 <?php
+require('config.php');
 require_once('User.class.php');
 
 $user = new User('jkowalski', 'tajneHasło');
