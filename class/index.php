@@ -1,6 +1,6 @@
 <?php
 require('config.php');
-require_once('User.class.php');
+require_once('class/User.class.php');
 
 $user = new User('jkowalski', 'tajneHasło');
 
