@@ -1,5 +1,5 @@
 <?php
-require_once('class/User.class.php');
+require_once('User.class.php');
 
 $user = new User('jkowalski', 'tajneHasło');
 
