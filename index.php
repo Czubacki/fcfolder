@@ -1,13 +1,25 @@
 <?php
+
+use Steampixel\Route;
+
 require('config.php');
 require_once('class/User.class.php');
 
-$user = new User('jkowalski', 'tajneHasło');
+Route::add('/' ,function() {
+    echo "strona główna";
+});
 
-if($user->login()) {
-    echo "Zalogowano poprawnie";
-} else {
-    echo "Błędny login lub hasło";
-}
+Route::add('/' ,function() {
+   // echo "strona logowania";
+   global $twig;
+   $twig->display('login.html.twig');
+});
 
+Route::add('/' ,function() {
+    //echo "strona rejestracji";
+   global $twig;
+   $twig->display('register.html.twig');
+});
+
+Route::run('/fcfolder');
 ?>
