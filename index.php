@@ -63,5 +63,12 @@ Route::add('/register', function() {
     }
 }, 'post');
 
+Route::add('/logout', function() {
+    global $twig;
+    session_destroy();
+    $twig->display('message.html.twig', 
+                                ['message' => "Wylogowano poprawnie"]);
+});
+
 Route::run('/fcfolder');
 ?>
